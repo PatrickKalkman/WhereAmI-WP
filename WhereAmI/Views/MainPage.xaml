@@ -14,6 +14,7 @@
     xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Primitives"
     xmlns:telerikCore="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Core"
     xmlns:adduplex="clr-namespace:AdDuplex;assembly=AdDuplex.WindowsPhone"
+    xmlns:Micro="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
@@ -28,7 +29,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
-        <Controls:Map x:Name="map" ZoomLevel="13" Grid.Row="0" cal:Message.Attach="[Event ResolveCompleted] = [Action ViewChanged($eventArgs)]">
+        <Controls:Map x:Name="map" ZoomLevel="13" Grid.Row="0" Micro:Message.Attach="[Event ResolveCompleted] = [Action ViewChanged($eventArgs)]">
             <toolkit:MapExtensions.Children>
                 <toolkit:Pushpin x:Name="locationPushPin"></toolkit:Pushpin>
             </toolkit:MapExtensions.Children>

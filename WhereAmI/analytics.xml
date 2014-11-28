@@ -2,13 +2,17 @@
 <!--More info at https://developers.google.com/analytics/devguides/collection/android/v2/parameters-->
 <analytics xmlns="http://googleanalyticssdk.codeplex.com/ns/easytracker">
   <!--Replace placeholder ID with your tracking ID-->
-  <trackingId>UA-YOUROWN-2</trackingId>
+  <trackingId>UA-XXXX-Y</trackingId>
   <!--Replace placeholder name with your app name. If you leave this empty your WMAppManifest.xml Title will be used-->
-  <appName>WhereAmI</appName>
+  <!--<appName>Test</appName>-->
   <!--Replace placeholder version with your app version. If you leave this empty your WMAppManifest.xml version will be used-->
   <!--<appVersion>1.0.0.0</appVersion>-->
+  <!--Optionally supply the application ID-->
+  <!--<appId>com.company.app</appId>-->
+  <!--Optionally supply the installer ID for this app.-->
+  <!--<appInstallerId>com.platform.vending</appInstallerId>-->
   <!--Enable writing of debug information to debug window log, useful for troubleshooting your implementation. Default is false.-->
-  <debug>false</debug>
+  <!--<debug>false</debug>-->
   <!--The dispatch period in seconds. Default is 0 (indicating to send logs immediately)-->
   <!--<dispatchPeriod>30</dispatchPeriod>-->
   <!--The dispatch period in seconds. Values must be between 0.0 and 100.0 Default is 100.0-->

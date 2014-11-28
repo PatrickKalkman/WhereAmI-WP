@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO.IsolatedStorage;
+
 using Caliburn.Micro;
 using Microsoft.Phone.Controls;
 using Caliburn.Micro.BindableAppBar;
@@ -10,12 +10,13 @@ using WhereAmI.ViewModels;
 
 namespace WhereAmI
 {
-    public class Bootstrapper : PhoneBootstrapper
+    public class Bootstrapper : PhoneBootstrapperBase 
     {
         private PhoneContainer container;
         
         public Bootstrapper()
         {
+            Initialize();
             LogManager.GetLog = type => new DebugLogger(type);
         }
 
@@ -28,7 +29,9 @@ namespace WhereAmI
         {
             container = new PhoneContainer();
 
-            container.RegisterPhoneServices(RootFrame);
+            if (!Execute.InDesignMode)
+                container.RegisterPhoneServices(RootFrame);
+            
             container.PerRequest<PrivacyViewModel>();
             container.PerRequest<MainPageViewModel>();
             container.PerRequest<SettingsViewModel>();
