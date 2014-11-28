@@ -1,5 +1,6 @@
 WhereAmI-WP
 ===========
+[![Build status](https://ci.appveyor.com/api/projects/status/rt5h54k63km3a89e/branch/master?svg=true)](https://ci.appveyor.com/project/kalkie/whereami-wp)
 
 ![Logo](http://cdn.marketplaceimages.windowsphone.com/v8/images/d605beca-31e3-4ebe-b91f-2ef1c513cd07?imageType=ws_icon_large)
 
